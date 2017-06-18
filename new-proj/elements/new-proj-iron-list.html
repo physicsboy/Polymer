@@ -1,0 +1,45 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-list/iron-list.html">
+<link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
+
+
+<dom-module id="new-proj-iron-list">
+  <template>
+    <style>
+      :host {
+        display: block;
+        overflow: hidden;
+      }
+
+      .data {
+        padding: 24px 16px 24px 16px;
+        border-bottom: 1px solid lightgrey;
+      }
+
+      .data:last-child {
+          border-bottom: none;
+        }
+      
+    </style>
+
+    <iron-ajax url="data.json" last-response="{{data}}" auto></iron-ajax>  
+      <iron-list items="[[data]]" as="data">
+          <template>
+            <div class="data">Name: [[data.name]]</div>
+          </template>
+    </iron-list>
+
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'new-proj-iron-list',
+
+      properties: {
+      
+      },
+
+    });
+  </script>
+</dom-module>

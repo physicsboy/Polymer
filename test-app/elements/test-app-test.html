@@ -1,0 +1,42 @@
+
+<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+<script src="webcomponentsjs/webcomponents-lite.min.js"></script>
+<link rel="import" href="../bower_components/polymer/polymer.html">
+  <dom-module id="test-app-test">
+    <template>
+      <style>
+        div {
+          height: 20px;
+          border-bottom: 1px lightgrey solid;
+        }
+        .red {
+          border-left: 10px solid red;
+        }
+      </style>
+        <div class="hello" on-click="toggleClass">hello</div>
+        <div class="hello" on-click="toggleClass">hello</div>
+        <div class="hello" on-click="toggleClass">hello</div>
+        <div class="hello" on-click="toggleClass">hello</div> 
+        <div class="hello" on-click="toggleClass">hello</div>
+    </template>
+    <script>
+        Polymer({
+          is: 'test-app-test',
+          properties: {
+            bgc: {
+              type: String,
+              observer: 'bgcChanged'
+            }
+          },
+          toggleClass: function(e) {
+            var toggleBorder = Polymer.dom(this.root).querySelector('.hello');
+            $(toggleBorder).toggleClass('red');
+          },
+         bgcChanged: function() {
+            var toggleBorder = Polymer.dom(this.root).querySelector('.hello');
+            toggleBorder.style.backgroundColor = this.bgc;
+          }
+        });
+    </script>
+  </dom-module>
+

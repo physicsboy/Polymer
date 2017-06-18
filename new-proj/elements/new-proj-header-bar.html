@@ -1,0 +1,45 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../bower_components/app-layout/app-scroll-effects/app-scroll-effects.html">
+<link rel="import" href="../bower_components/app-layout/app-header/app-header.html">
+<link rel="import" href="../bower_components/app-layout/app-header-layout/app-header-layout.html">
+<link rel="import" href="../bower_components/app-layout/app-toolbar/app-toolbar.html">
+<link rel="import" href="../bower_components/iron-list/iron-list.html">
+<link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
+
+<dom-module id="new-proj-header-bar">
+  <template>
+    <style>
+      :host {
+        display: block;
+        background: #115f9b;
+        color: white;
+      }
+    </style>
+    
+
+      <app-header slot="header" reveal effects="waterfall">
+          <app-toolbar>
+            <paper-icon-button icon="menu" drawer-toggle></paper-icon-button>
+            <div main-title>Adam's App</div>
+            <paper-icon-button icon="refresh"></paper-icon-button>
+            <paper-icon-button icon="create"></paper-icon-button>
+            <paper-icon-button icon="search"></paper-icon-button>
+          </app-toolbar>
+      </app-header>
+
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'new-proj-header-bar',
+
+      properties: {
+      
+      },
+
+    });
+  </script>
+</dom-module>

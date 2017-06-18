@@ -1,0 +1,56 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-icons/iron-icons.html">
+
+<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+
+<link rel="import" href="../bower_components/paper-card/paper-card.html">
+
+<dom-module id="new-proj-card">
+  <template>
+    <style include="iron-flex iron-flex-alignment">
+      :host {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+      }
+
+      paper-card {
+        max-width: 800px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /*height: 200px;*/
+      }
+
+    </style>
+
+       <paper-card image="https://static.pexels.com/photos/126407/pexels-photo-126407.jpeg" alt="Emmental">
+          <div class="card-content">
+            Veronica loves cats so much that she wishes she could be one instead of being a human!
+          </div>
+          <div class="card-actions horizontal layout">
+            How would you describe Veronica?
+            <paper-button class="flex">Crazy</paper-button>
+           <!--  <paper-button>Funny</paper-button> -->
+            <paper-button>Cute</paper-button>
+          </div>
+        </paper-card>
+
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'new-proj-card',
+
+      properties: {
+      
+      },
+
+    });
+  </script>
+</dom-module>

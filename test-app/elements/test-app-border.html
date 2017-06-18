@@ -1,0 +1,50 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout.html">
+<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+
+<dom-module id="test-app-border">
+  <template>
+    <style include="iron-flex iron-flex-alignment">
+       :host {
+        display: block;
+      }
+
+      .selected{
+    border-left: 5px solid red;
+}
+
+    </style>
+
+     <div class="account">test 1</div>
+     <div class="account">test 2</div>
+
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'test-app-border',
+
+      properties: {
+      
+      },
+
+        $(document).ready(function(){
+       $(".account").click(function(e){
+           $(".selected").removeClass("selected");
+           $(this).addClass("selected");
+           e.stopPropagation();
+       });   
+       $(document).click(function(){ 
+           $(".selected").removeClass("selected");
+       });
+    });
+
+
+    });
+  </script>
+</dom-module>

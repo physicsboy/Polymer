@@ -1,0 +1,21 @@
+{
+  "name": "newProj-element",
+  "main": "newProj-element.html",
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.9.0",
+    "paper-card": "PolymerElements/paper-card#^2.0.0",
+    "paper-material": "PolymerElements/paper-material#^2.0.0",
+    "iron-list": "PolymerElements/iron-list#^2.0.1"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^1.0.0",
+    "web-component-tester": "Polymer/web-component-tester#^6.0.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0"
+  },
+  "resolutions": {
+    "paper-ripple": "^1.0.0",
+    "font-roboto": "^1.0.1",
+    "paper-card": "andytuwm/paper-card#latest"
+  }
+}
